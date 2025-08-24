@@ -139,3 +139,30 @@ section{
     background: transparent;
     color: var(--text-color);
 }
+header{
+    padding:8px 17% ;
+    background: transparent;
+    backdrop-filter:blur(35px);
+
+}
+.feature-content{
+    display: grid;
+    grid-template-columns: repeat( auto-fit,minmax(150px,auto));
+    align-items: center;
+    text-align:center;
+    gap: 3rem;
+}
+.row-img{
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.row-img img{
+    width: 100%;
+    display: block;
+    transform: translate(0.7s);
+}
