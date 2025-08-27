@@ -28,8 +28,8 @@ header{
     right: 0;
     z-index: 1000;
     width: 100%;
-    background: transparent;
-    padding:27px 17%;
+    background: linear-gradient(rgba(0, 0, 0, 0.393), rgba(0, 0, 0, 0.486));
+    padding: 27px 17%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,6 +42,7 @@ header{
 }
 span{
     color: var(--main-color);
+    font-family: mv boli;
 }
 .navbar{
     display: flex;
@@ -91,7 +92,7 @@ section{
     position: relative;
     height: 100vh;
     width: 100%;
-    background:linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(/image/image.png);
+    background:linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../image/img/cambodia.jpg);
     background-size: cover;
     background-position: bottom center;
     display: flex;
@@ -119,7 +120,10 @@ section{
     line-height: 30px;
     color: #ffffffab;
     margin-bottom: 35px;
-
+}
+.home-text span{
+    color: var(--main-color);
+    font-family: mv boli;
 }
 .btn{
     display: inline-block;
@@ -145,24 +149,468 @@ header{
     backdrop-filter:blur(35px);
 
 }
-.feature-content{
-    display: grid;
-    grid-template-columns: repeat( auto-fit,minmax(150px,auto));
-    align-items: center;
-    text-align:center;
-    gap: 3rem;
-}
-.row-img{
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.row-img img{
+
+
+
+
+/* Information */
+
+.information{
     width: 100%;
+    padding: 90px 0px;
+}
+
+.information h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.information h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+
+.information h1 span::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
     display: block;
-    transform: translate(0.7s);
+    position: relative;
+    bottom: 15px;
+}
+.information .khmer-people {
+    width: 70%;
+    margin: 0 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.information .khmer-people .khmer-card{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(246, 253, 51, 0.2);
+    border-radius: 8px;
+}
+.information .khmer-people .khmer-card .khmer_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.information .khmer-people .khmer-card .khmer_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.information .khmer-people .khmer-card .khmer_image:hover img{
+    transform: scale(1.1);
+    border-radius: 4px;
+}
+.information .khmer-people .khmer-card .love{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.information .khmer-people .khmer-card:hover .love{
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+.information .khmer-people .khmer-card .love i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    text-shadow: 0 0 4px #ffffff;
+    transition: 0.2s;
+}
+.information .khmer-people .khmer-card .love i:hover{
+    color: #fac031;
+}
+.information .khmer-people .khmer-card .text h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #ffffff;
+}
+.information .khmer-people .khmer-card .text p{
+    text-align: center;
+    margin: 4px 8px;
+    color: white;
+}
+.information .khmer-people .khmer-card .btn_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+    padding: 8px 10px;
+    margin: 4px 80px;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+.information .khmer-people .khmer-card .btn_card:hover{
+    background: #fac031;
+    transition: .2s;
+    transform: scale(1.1);
+}
+
+/* About */
+.about{
+    width: 100%;
+    padding: 70px 0px;
+    margin-bottom: 10%;
+}
+.about h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.about h1 span{
+    color: var(--main-color);
+    font-family: mv boli;
+    margin-right: 15px;
+}
+.about h1 span::after{
+    content: '';
+    height: 2px;
+    position: relative;
+    background-color: #fac031;
+    display: block;
+    bottom: 20px;
+}
+.about .about_content{
+    width: 70%;
+    margin: 0 15%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.about .about_content .about_card{
+    width: 1050px;
+    height: 800px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(246, 253, 51, 0.2);
+    border-radius: 8px;
+}
+.about .about_content .about_card .about_image{
+    width: 1000px;
+    height: 630px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.about .about_content .about_card .about_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+.about .about_content .about_card .about_image:hover img{
+    transform: scale(1.1);
+    border-radius: 4px;
+}
+
+.about .about_content .about_card .game h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #ffffff;
+}
+.about .about_content .about_card .game p{
+    text-align: center;
+    margin: 4px 8px;
+    color: white;
+}
+.about .about_content .about_card .game_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+    padding: 12px 10px;
+    margin: 8px 400px;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+.about .about_content .about_card .game_button:hover{
+    background: #fac031;
+    transition: .2s;
+    transform: scale(1.06);
+}
+
+
+/* Foods */
+
+.food{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    background: url(../image/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: fill;
+}
+.food h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.food h1 span{
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+.food h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    position: relative;
+    bottom: 15px;
+    display: block;
+}
+.food .food_content{
+    width: 95%;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.food .food_content .food_card{
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 2px 32px rgba(4, 4, 4, 0.3);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+.food .food_content .food_card .food_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .3s;
+}
+.food .food_content .food_card:hover .food_image{
+    transform: translateY(-60px);
+}
+.food .food_content .food_card .food_image img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+}
+.food .food_content .food_card .food-history{
+    text-align: center;
+}
+.food .food_content .food_card .food-history .name{
+    color: #fac031;
+    transition: .3s;
+}
+.food .food_content .food_card:hover .food-history .name{
+    transform: translateY(-50px);
+}
+.food .food_content .food_card .food-history p{
+    text-align: center;
+    line-height: 22px;
+    transition: .3s;
+    color: #fff;
+}
+.food .food_content .food_card:hover .food-history p{
+    margin-top: 5px;
+}
+
+
+/* Culture */
+
+.culture{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+.culture h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.culture h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+.culture h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    position: relative;
+    bottom: 15px;
+    display: block;
+}
+.culture .culture_content{
+    width: 95%;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.culture .culture_content .culture_card{
+    width: 450px;
+    height: 650px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+    background: #fff;
+}
+.culture .culture_content .culture_card .culture_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .3s;
+}
+.culture .culture_content .culture_card:hover .culture_image{
+    transform: translateY(-60px);
+}
+.culture .culture_content .culture_card .culture_image img{
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+}
+.culture .culture_content .culture_card .culture_text{
+    text-align: center;
+}
+.culture .culture_content .culture_card .name{
+    color: #000;
+    transition: .3s;
+}
+.culture .culture_content .culture_card:hover .culture_text .name{
+    transform: translateY(-50px);
+}
+.culture .culture_content .culture_card .culture_text p{
+    text-align: center;
+    line-height: 22px;
+    transition: .3s;
+}
+.culture .culture_content .culture_card .culture_text .bio{
+    color: #000;
+}
+.culture .culture_content .culture_card .culture_text:hover .bio{
+    margin-bottom: 10px;
+}
+
+/* contact */
+.contact{
+    margin-top: 10%;
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.contact h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 55px;
+}
+.contact h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.contact h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+.contact .contact_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact .contact_content .contact_image img{
+    width: 700px;
+    height: 400px;
+    border-radius: 8px;
+}
+.contact .contact_content form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+.contact .contact_content form .input p{
+    line-height: 24px;
+}
+.contact .contact_content form .input {
+    margin: 5px;
+}
+.contact .contact_content form .input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #ccc;
+    background: #eee;
+    outline: none;
+    border-radius: 4px;
+}
+.contact .contact_content form .input input:focus{
+    border:2px solid #fac031;
+}
+.contact .contact_content form .booking{
+    padding: 10px;
+    background: #fac031;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.contact .contact_content form .booking:hover{
+    transform: scale(1.06);
+    transition: .3s;
 }
