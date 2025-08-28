@@ -669,3 +669,20 @@ header{
     color: #747283;
     font-size: 16px ;
 }
+
+
+/* responsive */
+
+@media(max-width: 1050px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    header .navbar{
+        display: grid;
+        flex-wrap: wrap;
+    }
+    .information{
+        gap: 1.5rem;
+    }
+}
