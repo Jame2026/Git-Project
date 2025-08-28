@@ -514,7 +514,7 @@ header{
     image-rendering: auto;
     object-position: center;
     border-radius: 50%;
-    border: 5px solid #ffffff;
+    border: 2px solid #ffffff;
 }
 .culture .culture_content .culture_card .culture_text{
     text-align: center;
@@ -618,71 +618,255 @@ header{
 }
 
 /* footer */
-.footer{
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #3a3a3a;
+}
+footer .footer_main{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    background-color: #3a3a3a;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.footer-box{ 
-    margin-left: 56px;
-    display: flex;
-    flex-direction: column;
+footer .footer_main .footer_tag{
+    text-align: center;
 }
-.footer-box h3{
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600px;
-    margin-bottom: 15px;
+footer .footer_main .footer_tag h3{
+    color: var(--main-color);
+    margin-bottom: 25px;
+    font-size: 30px;
 }
-.footer-box a{
-    font-size: 20px;
-    color: #eae4f0;
-    margin-bottom: 0.8rem;
-    transition: all .50s ease;
+footer .footer_main .footer_tag a{
+    margin: 10px 0;
+    color: #eae4f4;
+    display: block;
+    transition: .5s all ease;
 }
-.footer-box a:hover{
+footer .footer_main .footer_tag a:hover{
     transform: translate(-5px);
-    color: var(--text-color);
 }
-.social a{
-    display: inline-flex;
+footer .footer_main .footer_tag .social a{
+    margin: 10px 5px;
+    cursor: pointer;
+}
+footer .footer_main .footer_tag i:hover{
+    color: #fac031;
+    transition: .2s;
+}
+footer .end{
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 36px;
-    width: 36px;
-    background-color: #837a7a ;
-    color: var(--text-color);
-    font-size: 24px;
-
-    border-radius: 50%;
-    margin-right: 8px;
-    transition: transform 0.6s;
+    padding: 15px;
 }
-.social a:hover{
-    background-color: rgb(243, 239, 239);
-    color: var(--bg-color);
-    transform: translateX(5px);
-}
-.copyright{
-    text-align: center;
-    padding: 20px;
+footer .end span{
     color: #747283;
-    font-size: 16px ;
+    margin-left: 10px;
 }
-
 
 /* responsive */
 
-@media(max-width: 1050px){
+@media(max-width: 1280px){
     header{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
     header .navbar{
-        display: grid;
-        flex-wrap: wrap;
+        display: flix;
+        flex-wrap: nowrap;
     }
     .information{
         gap: 1.5rem;
+    }
+}
+
+@media(max-width: 800px){
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+    }
+    body{
+        height: fit-content;
+    }
+    header{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        padding: 4px 4px;
+        z-index: 1001;
+        transition: all .5s ease;
+    }
+    header .navbar{
+        display: flex;
+    }
+    header .navbar a{
+        margin: 0px 13px;
+        padding: 4px 1px;
+    }
+    header .navbar a:hover{
+        background-color: var(--main-color);
+        border-radius: 8px;
+        color: #000;
+    }
+    header .right{
+        display: flex;
+    }
+    header .right a,i{
+        margin: 0 3px;
+    }
+    section {
+        padding: 60% 0;
+    }
+    section .home-text{
+        margin-left: 8%;
+        text-align: start;
+    }
+
+    .information{
+        width: 100%;
+        padding: 70px 0;
+    }
+    .information .khmer-people{
+        width: 90%;
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .information .khmer-people .khmer-card{
+        width: 750px;
+        height: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .information .khmer-people .khmer-card .khmer_image{
+        width: 670px;
+        height: 410px;
+    }
+    .information .khmer-people .khmer-card .love{
+        width: 80px;
+        height: 80px;
+        float: right;
+        position: relative;
+        top: -400px;
+        right: -16px;
+        opacity: 0;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+    .information .khmer-people .khmer-card .btn_card{
+        width: 200px;
+        height: 40px;
+        margin: 8px 280px;
+    }
+    .information .khmer-people .khmer-card:hover .love{
+        position: relative;
+        top: -400px;
+        right: 50px;
+        opacity: 1;
+    }
+    .about{
+        width: 100%;
+        padding: 70px 0;
+    }
+    .about .about_content {
+        width: 60%;
+        margin-left: 5%;
+    }
+    .about .about_content .about_card{
+        width: 750px;
+        height: 850px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        background-color: var(--main-color);
+        box-shadow: 0 0 10px rgba(246, 253, 51, 0.2);
+        border-radius: 8px;
+    }
+    .about .about_content .about_card .about_image{
+        width: 700px;
+        height: 650px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .about .about_content .about_card .about_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: 0.3s;
+    }
+    .about .about_content .about_card .about_image:hover img{
+        transform: scale(1.1);
+        border-radius: 4px;
+    }
+    .about .about_content .about_card .game_button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        background: #000;
+        padding: 16px 32px;
+        margin: 8px 300px;
+        transition: 0.5s;
+        border-radius: 8px;
+        font-weight: 700;
+    }
+    .food{
+        width: 100%;
+        padding: 70px 0;
+    }
+    .food .food_content{
+        margin-left: 26px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .food .food_content .food_card{
+        margin-top: 8%;
+    }
+    .culture .culture_content{
+        width: 95%;
+        margin: 70px 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4% 0;
+    }
+    .culture .culture_content .culture_card{
+        width: 700px;
+        height: 920px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        padding: 8px 20px;
+        margin: 0 8px;
+        background: #fff;
+    }
+    .culture .culture_content .culture_card:hover .culture_image{
+    transform: translateY(-60px);
+    }
+    .culture .culture_content .culture_card .culture_image img{
+        width: 650px;
+        height: 750px;
+    }
+    .contact{
+        margin-top: 230%;
+        width: 100%;
+        height: 100vh;
+        padding: 70px 0;
+    }
+    .contact .contact_content{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .culture .culture_content .culture_card .name{
+        color: #000;
+        transition: none;
+    }
+    .culture .culture_content .culture_card:hover .culture_text .name{
+        transform: none;
     }
 }
