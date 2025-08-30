@@ -968,7 +968,7 @@ footer .end span{
     .information .khmer-people .khmer-card{
         width: 350px;
         height: fit-content;
-        margin-left: 13%;
+        margin-left: 5%;
     }
     .information .khmer-people .khmer-card .khmer_image{
         width: 300px;
@@ -1030,7 +1030,7 @@ footer .end span{
     .about .about_content .about_card{
         width: 350px;
         height: fit-content;
-        margin-left: 13%;
+        margin-left: 5%;
 
     }
     .about .about_content .about_card .about_image{
@@ -1077,7 +1077,7 @@ footer .end span{
         padding: 8px 20px;
         margin: 10px 8px;
         background: linear-gradient(rgba(8, 8, 8, 0.4), rgba(251, 251, 251, 0.4));
-        margin-left: 18%;
+        margin-left: 8%;
     }
     .food .food_content .food_card .food_image{
         display: flex;
@@ -1121,7 +1121,7 @@ footer .end span{
     .culture{
         width: 100%;
         padding: 20px 0;
-        margin: 230% 0;
+        margin: 260% 0;
     }
     .culture h1{
         font-size: 24px;
@@ -1140,7 +1140,7 @@ footer .end span{
         height: 510px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         border-radius: 8px;
-        margin-left: 10%;
+        margin-left: 4%;
     }
     .culture .culture_content .culture_card:hover .culture_image{
         transform: none;
